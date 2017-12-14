@@ -21,5 +21,5 @@ You should create one R script called run_analysis.R that does the following.
 1. Download the source data locally.
 2. Place the "run_analysis.R" script inside the "UCI HAR Dataset" folder that is created by downloading the source data.
 3. The "UCI HAR Dataset" folder should be set as the working directory in order to source the run_analysis.R script. Use: source("run_analysis.R")
-+ a. **Note**: The "dplyr" package is used in this script. It will be installed if not available
++ **Note**: The "dplyr" package is used in this script. It will be installed if not available
 4. A "summarizedData.csv" file will be created in the working directory containing the tidy data set that is the end result of steps 1-5 in the Summary section above.
