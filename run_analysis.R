@@ -60,8 +60,9 @@ groupedData <- group_by(finalData, activityLabel, subjectId)
 summarizedData <- summarize_all(groupedData, funs(mean(., na.rm=TRUE)))
 
 
-## Write the summarized data to a CSV file in the working directory
+## Write the summarized data to a CSV and Text file in the working directory
 write.csv(summarizedData, file = "summarizedData.csv", row.names = FALSE)
+write.table(summarizedData, file = "summarizedData.txt", row.names = FALSE)
 
 ## Write to the console to alert the user that the summarized data is available
-print("Summarized data is available in the summaryData.csv file in the working directory")
+print("Summarized data is available in the summaryData.csv and summaryData.txt files in the working directory")
