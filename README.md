@@ -18,8 +18,9 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Usage
-1. Download the source data locally.
-2. Place the "run_analysis.R" script inside the "UCI HAR Dataset" folder that is created by downloading the source data.
-3. The "UCI HAR Dataset" folder should be set as the working directory in order to source the run_analysis.R script. Use: source("run_analysis.R")
+1. The "CodeBook.md" has specifics on the transformations, variables, and data used in the "run_analysis.R script".
+2. Download the source data locally.
+3. Place the "run_analysis.R" script inside the "UCI HAR Dataset" folder that is created by downloading the source data.
+4. The "UCI HAR Dataset" folder should be set as the working directory in order to source the run_analysis.R script. Use: source("run_analysis.R")
 + **Note**: The "dplyr" package is used in this script. It will be installed if not available
-4. A "summarizedData.csv" file will be created in the working directory containing the tidy data set that is the end result of steps 1-5 in the Summary section above.
+5. A "summarizedData.csv" file will be created in the working directory containing the tidy data set that is the end result of steps 1-5 in the Summary section above.
