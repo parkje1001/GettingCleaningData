@@ -37,15 +37,15 @@ The output is a "summarizedData.csv" file, containing the average values by subj
 ## Analysis Details
 Load all of the data files, then rename columns in specific resulting dataframes so data can be merged together into one data set. 
 * activity_Labels: The columns in the activity_labels.txt file are renamed to "activityId" and "activityLabel".
-* test_subject: The subject_... files have the column renamed to subjectId
+* test_subject: The subject_... files have the column renamed to "subjectId".
 * testX, trainX: The X_... files have their columns renamed to the values found in the second column of the features.txt file.
-* testY, trainY: The y_... files have the column renamed to "activityId" to allow for merging with the data from the activity_labels.txt file.
+* testY, trainY: The y_... files have the column renamed to "activityId" to allow for merging with the data from the activity_Labels dataframe.
 
 * testData: The data files from the test set are column-binded together
 * trainData: The data files from the train set are column-binded together
 * dataAllFeatures: The combined test and train dataframes are row-binded together into one dataframe. Input dataframes have same dimensions and have same column names and orders. Data for all features are included in this dataframe.
 
-* finalData: Dataframe containing metadata columns, only the mean() and std() feature columns. Mean and Std feature columns are  identified by having the text "-mean()" or "-std()" in the column name. activity_Labels dataframe is merged into this dataframe. The column for activityId is removed, leaving a dataframe with only the desired columns and all rows.
+* finalData: Dataframe containing metadata columns, only the mean() and std() feature columns. Mean and Std feature columns are  identified by having the text "-mean()" or "-std()" in the column name. activity_Labels dataframe is merged into this dataframe using the "activityId" column to make the join. The column for activityId is then removed, leaving a dataframe with only the desired columns and all rows.
 
 * groupedData: Dataframe is grouped (using dplyr package) by activityLabel and subjectId
 * summarizedData: Mean is taken against the grouped dataframe, with NA's being removed. This is the dataframe that is written into the "summarizedData.csv" file as the output tidy data set.
