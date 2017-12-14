@@ -32,7 +32,7 @@ The run_analysis.R script accomplishes the following:
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The output is a "summarizedData.csv" file, containing the average values by subject and activity grouping for every mean and std deviation measurement in the original train and test data.
+The output is a "summarizedData.csv" file and a "summarizedData.txt" file, containing the average values by subject and activity grouping for every mean and std deviation measurement in the original train and test data.
 
 ## Analysis Details
 Load all of the data files, then rename columns in specific resulting dataframes so data can be merged together into one data set. 
@@ -48,4 +48,4 @@ Load all of the data files, then rename columns in specific resulting dataframes
 * finalData: Dataframe containing metadata columns, only the mean() and std() feature columns. Mean and Std feature columns are  identified by having the text "-mean()" or "-std()" in the column name. activity_Labels dataframe is merged into this dataframe using the "activityId" column to make the join. The column for activityId is then removed, leaving a dataframe with only the desired columns and all rows.
 
 * groupedData: Dataframe is grouped (using dplyr package) by activityLabel and subjectId
-* summarizedData: Mean is taken against the grouped dataframe, with NA's being removed. This is the dataframe that is written into the "summarizedData.csv" file as the output tidy data set. Each data point in the tidy data set represents a mean value for that feature for the identified grouping.
+* summarizedData: Mean is taken against the grouped dataframe, with NA's being removed. This is the dataframe that is written into the "summarizedData.csv" and "summarizedData.txt" files as the output tidy data set. Each data point in the tidy data set represents a mean value for that feature for the identified grouping.
